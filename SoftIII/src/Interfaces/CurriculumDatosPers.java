@@ -363,13 +363,10 @@ public class CurriculumDatosPers extends javax.swing.JFrame {
     }//GEN-LAST:event_guardarActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-//        CurriculumFormAcad fa = new CurriculumFormAcad();
-//        fa.id_usuario = id_usuario;
-//        fa.setVisible(true);
-        
-        VentanaCurriculum v = new VentanaCurriculum();
-        v.id_usuario = id_usuario;
-        v.setVisible(true);
+        CurriculumFormAcad fa = new CurriculumFormAcad(id_usuario);
+        fa.setVisible(true);
+        dispose();
+
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
@@ -404,6 +401,7 @@ public class CurriculumDatosPers extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CurriculumDatosPers().setVisible(true);
+                
             }
         });
     }

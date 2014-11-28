@@ -138,6 +138,9 @@ public class MenuDocente extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel2AncestorAdded
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Inicio inicio = new Inicio();
+        inicio.setVisible(true);
+        
         dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed

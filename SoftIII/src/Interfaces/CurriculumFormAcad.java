@@ -452,9 +452,7 @@ public class CurriculumFormAcad extends javax.swing.JFrame {
                 NivelCursoPosGradoEliminar v = new NivelCursoPosGradoEliminar();
                 v.id_usuario = id_usuario;
         
-//                VentanaNivelCursosPosgradoEliminar v = new VentanaNivelCursosPosgradoEliminar();
-//                v.id_usuario = id_usuario;
-//                JOptionPane.showMessageDialog(null, "IMPORTANTE: PRIMERO BUSQUE EL REGISTRO QUE DESEA ELIMINAR, VERIFIQUE SI ES TAL Y LUEGO ELIMINE");
+                JOptionPane.showMessageDialog(null, "IMPORTANTE: PRIMERO BUSQUE EL REGISTRO QUE DESEA ELIMINAR, VERIFIQUE SI ES TAL Y LUEGO ELIMINE");
     }//GEN-LAST:event_borrar3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -469,8 +467,8 @@ public class CurriculumFormAcad extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         CurriculumDatosPers dp = new CurriculumDatosPers(id_usuario);
-//        dp.id_usuario = id_usuario;
         dp.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
