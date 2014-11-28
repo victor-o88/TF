@@ -109,7 +109,7 @@ public class MenuDocente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void datosPerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datosPerActionPerformed
-        CurriculumDatosPers cv = new CurriculumDatosPers();
+        CurriculumDatosPers cv = new CurriculumDatosPers(id);
         cv.setVisible(true);
     }//GEN-LAST:event_datosPerActionPerformed
 

@@ -468,8 +468,8 @@ public class CurriculumFormAcad extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        CurriculumDatosPers dp = new CurriculumDatosPers();
-        dp.id_usuario = id_usuario;
+        CurriculumDatosPers dp = new CurriculumDatosPers(id_usuario);
+//        dp.id_usuario = id_usuario;
         dp.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 

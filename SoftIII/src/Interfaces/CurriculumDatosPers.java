@@ -20,11 +20,15 @@ import javax.swing.JOptionPane;
  */
 public class CurriculumDatosPers extends javax.swing.JFrame {
     ButtonGroup grupo;
-    public String id_usuario;
+    private String id_usuario;
     /**
      * Creates new form Curriculum
      */
-    public CurriculumDatosPers() {
+    public CurriculumDatosPers(){
+        
+    }
+    public CurriculumDatosPers(String id) {
+        id_usuario = id;
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
