@@ -145,8 +145,8 @@ public class UsuarioDAO {
             Connection con = BaseDatos.getInstance();
             Statement smt = con.createStatement();
             ResultSet result = smt.executeQuery("SELECT nombre, apellido, sexo, fec_nac, email, "
-                    + "cuil, pais, provincia, calle, num, piso, codigo_postal, telefono, celular "
-                    + "FROM usuarios WHERE id_usuario = '" + id_usuario + "'");
+                    + "cuil, pais, provincia, calle, num, piso, codigo_postal, telefono, celular, "
+                    + "id_categoria FROM usuarios WHERE id_usuario = '" + id_usuario + "'");
             Usuario usuario = new Usuario();
             while (result.next()) {
                 usuario.setNombre(result.getString("nombre"));
@@ -165,6 +165,7 @@ public class UsuarioDAO {
                 usuario.setCodigo_postal(result.getInt("codigo_postal"));
                 usuario.setTelefono(result.getLong("telefono"));
                 usuario.setCelular(result.getLong("celular"));
+                usuario.setId_categoria(result.getString("id_categoria"));
             }
             result.close();
             smt.close();

@@ -42,6 +42,7 @@ public class CurriculumDatosPers extends javax.swing.JFrame {
 
     
     public void importar() throws DataAccessException {
+            Long numT, numC;
             GestorUsuario gestor = new GestorUsuario();
             Usuario usuario = gestor.mostrar(id_usuario);
             nombre.setText(usuario.getNombre());
@@ -51,16 +52,26 @@ public class CurriculumDatosPers extends javax.swing.JFrame {
             
             
             cuil.setText(usuario.getCuil());
-            //paises.setSelectedItem(usuario.getPais());  VER
+            paises.setSelectedItem(usuario.getPais());  
             provincia.setText(usuario.getProvincia());
             depart.setText(usuario.getDepartamento());
             calle.setText(usuario.getCalle());
             numCasa.setText(Integer.toString(usuario.getNum()));
             pisoDto.setText(usuario.getPiso());
             cp.setText(Integer.toString(usuario.getCodigo_postal()));
-            numTel.setText(Long.toString(usuario.getTelefono()));
-            numCel.setText(Long.toString(usuario.getCelular()));
-            //categoria.setSelectedItem(usuario.getId_categoria());  VER
+            numT=usuario.getTelefono();
+            String t = numT.toString();
+            String primeroTel = t.substring(0, 3);
+            String segundoTel = t.substring(3, 9);
+            areaTel.setText(primeroTel);
+            numTel.setText(segundoTel);
+            numC=usuario.getCelular();
+            String c = numC.toString();
+            String primeroCel = c.substring(0, 3);
+            String segundoCel = c.substring(3, 9);
+            areaCel.setText(primeroCel);
+            numCel.setText(segundoCel);
+            categoria.setSelectedItem(usuario.getId_categoria());  
             
             
             
